@@ -66,7 +66,7 @@ span{
     font-family: 'Great Vibes', cursive;    
     font-size: 60px;
     font-weight: 700;
-    color:#c8a97e
+    color:#c8a97e;
 }
 
 .carousel-caption h1{
@@ -74,3 +74,88 @@ span{
     font-weight: 700;
 }
 
+
+
+/* //order sections starts */
+
+.makereservation {
+    margin: 100px 0px;
+    width: 50%;
+    background: #ffffff;
+  }
+  
+  .makereservation .form-group label {
+    font-weight: 600;
+    color: #000000;
+  }
+
+  .img{
+    background-attachment: fixed;
+  background-position: center; 
+  }
+  
+
+/* //order sections ends */
+
+
+
+
+/* //footer */
+
+/* .open_hours{
+    padding-left: 30px;
+    white-space: nowrap;
+} */
+
+footer{
+  background-color: #000; 
+}
+
+.footer_heading{
+    font-size: 20px;
+    padding-bottom: 40px;
+}
+
+.footer-widget p {
+    color: rgba(255, 255, 255, 0.7);
+    font-size: 15px;
+}
+
+.footer-widget li{
+    list-style-type: none;
+}
+
+.open-hours{   
+  color: rgba(255, 255, 255, 0.7);
+}
+
+.social_handle{
+    font-size: 20px;
+}
+
+.time_hour{
+    font-size: 15px;
+    padding-left: 30px;
+    text-align: center;
+}
+
+.time_hour1{
+    font-size: 15px;
+   width: 20%;
+}
+
+.footer-widget{
+    width: 100%;
+}
+
+.list-unstyled{
+    width: 100%;
+}
+
+.place{
+    background-color: rgba(255, 255, 255, 0.7);
+}
+
+.submit{
+    background-color:#c8a97e;
+}
