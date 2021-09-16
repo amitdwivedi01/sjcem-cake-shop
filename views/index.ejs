@@ -1,32 +1,47 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    
-    <!-- <link rel="stylesheet"  href="css/style.css" /> -->
-    <!-- Bootstrap CSS -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU" crossorigin="anonymous">
 
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap" rel="stylesheet">
-    
-<!-- //font-awesome-->
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-<link rel="stylesheet" href="css/style.css" type="text/css">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <script>
+    // $('.count').each(function () {
+    //   $(this).prop('Counter', 0).animate({
+    //     Counter: $(this).text()
+    //   }, {
+    //     duration: 4000,
+    //     easing: 'swing',
+    //     step: function (now) {
+    //       $(this).text(Math.ceil(now));
+    //     }
+    //   });
+    // });
+  </script>
+
+  <!-- <link rel="stylesheet"  href="css/style.css" /> -->
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU" crossorigin="anonymous">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap" rel="stylesheet">
+
+  <!-- //font-awesome-->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="css/style.css" type="text/css">
 </head>
+
 <body>
- 
-     <!-- Nav bar starts -->
-  <div class="container">
-    <nav class="navbar navbar-expand-lg  fixed-top bg-dark">
+
+  <!-- Nav bar starts -->
+  <nav class="navbar navbar-expand-lg  fixed-top bg-dark">
+    <div class="container">
       <a class="navbar-brand ms-5" href="./index.html">
         <h2 class="bold text-white" style="font-family: 'Great Vibes', cursive;">Sjcem</h2>
       </a>
-      <button  class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
         aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
         <span><i class="fa fa-navicon" style="color: rgb(240, 25, 25); font-size: larger;"></i></span>
       </button>
@@ -55,63 +70,137 @@
           </li>
         </ul>
       </div>
-    </nav>
-  </div>
+    </div>
+  </nav>
+
 
   <!-- caraousel starts -->
-
-  <div id="carouselExampleCaptions" class="carousel slide" data-bs-ride="carousel">
-    <!-- <div class="carousel-indicators">
+  <section>
+    <div id="carouselExampleCaptions" class="carousel slide" data-bs-ride="carousel">
+      <!-- <div class="carousel-indicators">
       <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
       <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1" aria-label="Slide 2"></button>
       <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2" aria-label="Slide 3"></button>
     </div> -->
-    <div class="carousel-inner">
-      <div class="carousel-item active">
-        <img src="images/bg_1.jpg" class="" alt="...">
-        <div class="carousel-caption d-none d-md-block">
-          <span>Sjcem</span>
-         <h1>Birthday Cake</h1>
+      <div class="carousel-inner">
+        <div class="carousel-item active">
+          <img src="images/bg_1.jpg" class="" alt="...">
+          <div class="carousel-caption d-none d-md-block">
+            <span>Sjcem</span>
+            <h1>Birthday Cake</h1>
+          </div>
+        </div>
+        <div class="carousel-item">
+          <img src="images/bg_2.jpg" class="" alt="...">
+          <div class="carousel-caption d-none d-md-block">
+            <span>Sjcem</span>
+            <h1>Wedding Cake</h1>
+          </div>
+        </div>
+        <div class="carousel-item">
+          <img src="images/bg_3.jpg" class="" alt="...">
+          <div class="carousel-caption d-none d-md-block">
+            <span>Sjcem</span>
+            <h1>Sjcem Special Dessert</h1>
+          </div>
+        </div>
+        <div class="carousel-item">
+          <img src="images/bg_4.jpg" class="" alt="...">
+          <div class="carousel-caption d-none d-md-block">
+            <span>Sjcem</span>
+            <h1>Sjcem Special Pastries</h1>
+          </div>
         </div>
       </div>
-      <div class="carousel-item">
-        <img src="images/bg_2.jpg" class="" alt="...">
-        <div class="carousel-caption d-none d-md-block">
-          <span>Sjcem</span>
-          <h1>Wedding Cake</h1>
-        </div>
-      </div>
-      <div class="carousel-item">
-        <img src="images/bg_3.jpg" class="" alt="...">
-        <div class="carousel-caption d-none d-md-block">
-          <span>Sjcem</span>
-          <h1>Sjcem Special Dessert</h1>
-        </div>
-      </div>
-      <div class="carousel-item">
-        <img src="images/bg_4.jpg" class="" alt="...">
-        <div class="carousel-caption d-none d-md-block">
-           <span>Sjcem</span>
-           <h1>Sjcem Special Pastries</h1>
-        </div>
-      </div>
+      <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions"
+        data-bs-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Previous</span>
+      </button>
+      <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions"
+        data-bs-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Next</span>
+      </button>
     </div>
-    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">
-      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-      <span class="visually-hidden">Previous</span>
-    </button>
-    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="next">
-      <span class="carousel-control-next-icon" aria-hidden="true"></span>
-      <span class="visually-hidden">Next</span>
-    </button>
-  </div>
+  </section>
 
   <!-- caraousel ends -->
 
+  <section class="ftco-wrap-about" id="about">
+    <div class="intro">
+      <div class="container px-5">
+        <div class="row">
+          <div class="col">
+            <div class="intro_content">
+              <div class="intro_subtitle page_subtitle">About Us</div>
+              <div class="intro_title">
+                <h2>Beautiful Story</h2>
+              </div>
+              <div class="intro_text">
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Rerum, voluptatum, earum
+                  corrupti molestiae id, alias quaerat qui expedita voluptatibus sed magnam aperiam
+                  quos! Illum quo nobis repellat possimus alias reiciendis quas pariatur, labore
+                  maxime blanditiis. Nam perferendis veritatis necessitatibus? Animi distinctio at et
+                  assumenda doloremque possimus unde doloribus aliquid nobis.</p>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-xl-4 col-md-6 intro_col">
+                <div class="intro_image"><img src="images/intro_1.jpg" alt="intro"></div>
+              </div>
+              <div class="col-xl-4 col-md-6 intro_col">
+                <div class="intro_image"><img src="images/intro_2.jpg" alt="intro"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
 
 
 
+  <section class="ftco-section ftco-counter img ftco-no-pt" id="section-counter">
+    <div class="container">
+      <div class="row d-md-flex">
+        <div class="col-md-9">
+          <div class="row d-md-flex align-items-center">
+            <div class="col-md-6 col-lg-3 mb-4 mb-lg-0 d-flex justify-content-center counter-wrap ftco-animate">
+              <div class="block-18">
+                <div class="text">
+                  <strong class="number timer count-title count-number" data-to="11" data-speed="2000">2</strong>
+                  <span>Years of Experience</span>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-6 col-lg-3 mb-4 mb-lg-0 d-flex justify-content-center counter-wrap ftco-animate">
+              <div class="block-18">
+                <div class="text">
+                  <strong class="number" data-number="100">100</strong>
+                  <span>Cakes/Variety</span>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-6 col-lg-3 mb-4 mb-lg-0 d-flex justify-content-center counter-wrap ftco-animate">
+              <div class="block-18">
+                <div class="text">
+                  <strong class="number" data-number="1500">1500</strong>
+                  <span>Happy Customers</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-3 text-md-left">
+          <p>The amount of love gained by you people is just pure and we are keep on improving our services
+            and tastes.</p>
+        </div>
+      </div>
+    </div>
+  </section>
 
+  <!-- about us section ends  -->
 
 
     <!-- menu section starts -->
@@ -287,93 +376,175 @@
 
 
 
+  <!-- gallery section starts  -->
+  <section class="ftco-section bg-light" id="gallery">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-12">
+          <div class="section-title normal-title">
+            <div class="row justify-content-center mb-5 pb-2">
+              <div class="col-md-12 text-center heading-section ftco-animate">
+                <span class="subheading">Gallery</span>
+                <h2 class="mb-4">Our Hot Picked Cakes</h2>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="container-fluid">
+      <div class="row">
+        <div class="col-lg-3 col-md-4 col-6 p-0">
+          <div class="gallery__pic">
+            <img src="images/dish1.jpg" alt="">
+          </div>
+        </div>
+        <div class="col-lg-3 col-md-4 col-6 p-0">
+          <div class="gallery__pic">
+            <img src="images/dish2.jpg" alt="">
+          </div>
+        </div>
+        <div class="col-lg-3 col-md-4 col-6 p-0">
+          <div class="gallery__pic">
+            <img src="images/dish3.jpg" alt="">
+          </div>
+        </div>
+        <div class="col-lg-3 col-md-4 col-6 p-0">
+          <div class="gallery__pic">
+            <img src="images/dish4.jpg" alt="">
+          </div>
+        </div>
+        <div class="col-lg-3 col-md-4 col-6 p-0">
+          <div class="gallery__pic">
+            <img src="images/dish5.jpg" alt="">
+          </div>
+        </div>
+        <div class="col-lg-3 col-md-4 col-6 p-0">
+          <div class="gallery__pic">
+            <img src="images/dish6.jpg" alt="">
+          </div>
+        </div>
+        <div class="col-lg-3 col-md-4 col-6 p-0">
+          <div class="gallery__pic">
+            <img src="images/dish7.jpg" alt="">
+          </div>
+        </div>
+        <div class="col-lg-3 col-md-4 col-6 p-0">
+          <div class="gallery__pic">
+            <img src="images/dish8.jpg" alt="">
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- gallery section ends -->
 
 
+  <!-- menu section starts -->
+  <section class="ftco-section" id="menu">
+    <div class="container-fluid px-4">
+        <div class="row justify-content-center mb-5 pb-2">
+            <div class="col-md-7 text-center heading-section ftco-animate">
+                <span class="subheading">Specialities</span>
+                <h2 class="mb-4">Our Menu</h2>
+            </div>
+        </div>
 
- <!-- //order section starts  -->
-
-  <section class=" img" id="order" style="background-image: url(images/order_bg.jpg);"
-        >
-        <div class="container">
-            <div class="row d-flex">
-                <div class="col-md-7 makereservation p-4 px-md-5 pb-md-5">
-                    <div class="heading-section mb-5 text-center">
-                        <span class="subheading">Order</span>
-                        <h2 class="mb-4">Your Cake</h2>
+        <div class="row">
+            <div class="col-md-6 col-lg-4 menu-wrap">
+                <div class="heading-menu text-center ftco-animate">
+                    <h3>Cakes</h3>
+                </div>
+                <div class="menus d-flex ftco-animate">
+                    <div class="menu-img img" style="background-image: url(images/menu1.jpg);"></div>
+                    <div class="text">
+                        <div class="d-flex">
+                            <div class="one-half">
+                                <h3>Strawberry</h3>
+                            </div>
+                            <div class="one-forth">
+                                <span class="price">₹400</span>
+                            </div>
+                        </div>
+                        <p><span>Strawberry</span>, <span>Chocolate</span>, <span>Berry</span>, <span>Cream</span>
+                        </p>
                     </div>
-                    <form action="#">
-                        <div class="row">
-                            <div class="col-md-6">
-                                <div class="form-group">
-                                    <label for="">Name</label>
-                                    <input type="text" class="form-control" placeholder="Vivek">
-                                </div>
+                </div>
+                <div class="menus d-flex ftco-animate">
+                    <div class="menu-img img" style="background-image: url(images/menu2.jpg);"></div>
+                    <div class="text">
+                        <div class="d-flex">
+                            <div class="one-half">
+                                <h3>Chocolate Cake</h3>
                             </div>
-                            <div class="col-md-6">
-                                <div class="form-group">
-                                    <label for="">Email</label>
-                                    <input type="email" class="form-control" placeholder="vivek@gmail.com">
-                                </div>
+                            <div class="one-forth">
+                                <span class="price">₹399</span>
                             </div>
-                            <div class="col-md-6">
-                                <div class="form-group">
-                                    <label for="">Address</label>
-                                    <input type="text" class="form-control" placeholder="XYZ">
-                                </div>
+                        </div>
+                        <p><span>Strawberry</span>, <span>Chocolate</span>, <span>Berry</span>, <span>Cream</span>
+                        </p>
+                    </div>
+                </div>
+                <div class="menus d-flex ftco-animate">
+                    <div class="menu-img img" style="background-image: url(images/menu3.jpg);"></div>
+                    <div class="text">
+                        <div class="d-flex">
+                            <div class="one-half">
+                                <h3>Red Valvet</h3>
                             </div>
-                            <div class="col-md-6">
-                                <div class="form-group">
-                                    <label for="">Phone</label>
-                                    <input type="text" class="form-control" placeholder="9874563215">
-                                </div>
+                            <div class="one-forth">
+                                <span class="price">₹500</span>
                             </div>
-                            <div class="col-md-6">
-                                <div class="form-group">
-                                    <label for="">Date</label>
-                                    <input type="text" class="form-control" id="book_date" placeholder="Date">
-                                </div>
+                        </div>
+                        <p><span>Strawberry</span>, <span>Chocolate</span>, <span>Berry</span>, <span>Cream</span>
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6 col-lg-4 menu-wrap">
+                <div class="heading-menu text-center ftco-animate">
+                    <h3>Wedding Cake</h3>
+                </div>
+                <div class="menus d-flex ftco-animate">
+                    <div class="menu-img img" style="background-image: url(images/menu4.jpg);"></div>
+                    <div class="text">
+                        <div class="d-flex">
+                            <div class="one-half">
+                                <h3>Pineapple</h3>
                             </div>
-                            <div class="col-md-6">
-                                <div class="form-group">
-                                    <label for="">Time</label>
-                                    <input type="text" class="form-control" id="book_time" placeholder="Time">
-                                </div>
+                            <div class="one-forth">
+                                <span class="price">₹450</span>
                             </div>
-                            <div class="col-md-6">
-                                <div class="form-group">
-                                    <label for="">Cake Flavour</label>
-                                    <div class="select-wrap one-third">
-                                        <div class="icon"><span class="ios-ios-arrow-down"></span></div>
-                                        <select name="" id="" class="form-control">
-                                            <option value="">Black Forest</option>
-                                            <option value="">Yellow Butter Cake</option>
-                                            <option value="">Pound Cake</option>
-                                            <option value="">Red Velvet Cake</option>
-                                            <option value="">Carrot Cake</option>
-                                            <option value="">Sponge Cake</option>
-                                            <option value="">Genoise Cake</option>
-                                            <option value="">Chiffon Cake</option>
-                                        </select>
-                                    </div>
-
-                                </div>
+                        </div>
+                        <p><span>Strawberry</span>, <span>Chocolate</span>, <span>Berry</span>, <span>Cream</span>
+                        </p>
+                    </div>
+                </div>
+                <div class="menus d-flex ftco-animate">
+                    <div class="menu-img img" style="background-image: url(images/menu5.jpg);"></div>
+                    <div class="text">
+                        <div class="d-flex">
+                            <div class="one-half">
+                                <h3>Belgium Cake</h3>
                             </div>
-                            <div class="col-md-6">
-                                <div class="form-group">
-                                    <label for="">Kg</label>
-                                    <div class="select-wrap one-third">
-                                        <div class="icon"><span class="ios-ios-arrow-down"></span></div>
-                                        <select name="" id="" class="form-control">
-                                            <option value="">0.5</option>
-                                            <option value="">1</option>
-                                            <option value="">1.5</option>
-                                            <option value="">2.5</option>
-                                            <option value="">5</option>
-                                            <option value="">10</option>
-                                            <option value="">Custom</option>
-                                        </select>
-                                    </div>
-                                </div>
+                            <div class="one-forth">
+                                <span class="price">₹400</span>
+                            </div>
+                        </div>
+                        <p><span>Strawberry</span>, <span>Chocolate</span>, <span>Berry</span>, <span>Cream</span>
+                        </p>
+                    </div>
+                </div>
+                <div class="menus d-flex ftco-animate">
+                    <div class="menu-img img" style="background-image: url(images/menu6.jpg);"></div>
+                    <div class="text">
+                        <div class="d-flex">
+                            <div class="one-half">
+                                <h3>Cookies</h3>
+                            </div>
+                            <div class="one-forth">
+                                <span class="price">₹400</span>
                             </div>
                             <div class="col-md-12 mt-3">
                                 <div class="form-group text-center">
@@ -381,75 +552,219 @@
                                 </div>
                             </div>
                         </div>
-                    </form>
+                        <p><span>Strawberry</span>, <span>Chocolate</span>, <span>Berry</span>, <span>Cream</span>
+                        </p>
+                    </div>
                 </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- //order section ends  -->
-
-
-
-   <!-- footer section starts -->
-  <footer>
-    <div class="container">
-        <div class="row">
-            <div class="col-md-6 col-lg-4 mt-5">
-                <div class="footer-widget mb-4">
-                    <h2 class="footer_heading text-white">Sjcem</h2>
-                    <p>We serve and take all type of cake orders. You can personalised cake of your own choice. We
-                        have the best chef in the city working for us and happying serving to you.
-                        <br><br><br>
-                        Sjcemcake@gmail.com
-                        <br>
-                        8888888888
-                    </p>
-                    <ul class="mt-3 d-flex">
-                        <li class="social_handle"><a href="#"><span class="fa fa-facebook"></span></a></li>
-                        <li class="social_handle ps-3"><a href="#"><span class="fa fa-twitter"></span></a></li>
-                        <li class="social_handle ps-3"><a href="#"><span class="fa fa-instagram"></span></a></li>
-                    </ul>
-                </div>
-            </div>
-            <div class="col-md-6 col-lg-3 mt-5 offset-1">
-                <div class="ftco-footer-widget mb-4">
-                    <h2 class="text-white footer_heading">Open Hours</h2>
-                    <ul class="list-unstyled open-hours">
-                        <li class="text-start  d-flex time_open"><h4 class="time_hour1">Mon</h4><h4 class="time_hour">  9:00 - 24:00</h4></li>
-                        <li class="text-start  d-flex time_open"><h4 class="time_hour1">Tue</h4><h4 class="time_hour">  9:00 - 24:00</h4></li>
-                        <li class="text-start  d-flex time_open"><h4 class="time_hour1">Wed</h4><h4 class="time_hour">  9:00 - 24:00</h4></li>
-                        <li class="text-start  d-flex time_open"><h4 class="time_hour1">Thu</h4><h4 class="time_hour">  9:00 - 24:00</h4></li>
-                        <li class="text-start  d-flex time_open"><h4 class="time_hour1">Fri</h4><h4 class="time_hour">  9:00 - 02:00</h4></li>
-                        <li class="text-start  d-flex time_open"><h4 class="time_hour1">Sat</h4><h4 class="time_hour">  9:00 - 02:00</h4></li>
-                        <li class="text-start  d-flex time_open"><h4 class="time_hour1">Sun</h4><h4 class="time_hour">  9:00 - 02:00</h4></li>
-                    </ul>
-                </div>
-            </div>
-           
-            <div class="col-md-6 col-lg-4 mt-5">
-                <div class="footer-widget mb-4">
-                    <h2 class="footer_heading text-white">Newsletter</h2>
-                    <p>To get cake catalogue every month by subscribing below.</p>
-                    <form action="#" class="subscribe-form">
-                        <div class="form-group">
-                            <input type="text" class="form-control place mb-2 text-center"
-                                placeholder="amitkumard@sjcem.edu.in">
-                            <input type="submit" value="Subscribe" class="form-control submit px-3">
+                <div class="menus d-flex ftco-animate">
+                    <div class="menu-img img" style="background-image: url(images/menu9.jpg);"></div>
+                    <div class="text">
+                        <div class="d-flex">
+                            <div class="one-half">
+                                <h3>Mango</h3>
+                            </div>
+                            <div class="one-forth">
+                                <span class="price">₹400</span>
+                            </div>
                         </div>
-                    </form>
+                        <p><span>Strawberry</span>, <span>Chocolate</span>, <span>Berry</span>, <span>Cream</span>
+                        </p>
+                    </div>
                 </div>
             </div>
         </div>
     </div>
+</section>
+<!-- menu section ends -->
+
+
+
+  <!-- //order section starts  -->
+
+  <section class=" img" id="order" style="background-image: url(images/order_bg.jpg);">
+    <div class="container">
+      <div class="row d-flex">
+        <div class="col-md-7 makereservation p-4 px-md-5 pb-md-5">
+          <div class="heading-section mb-5 text-center">
+            <span class="subheading">Order</span>
+            <h2 class="mb-4">Your Cake</h2>
+          </div>
+          <form action="#">
+            <div class="row">
+              <div class="col-md-6">
+                <div class="form-group">
+                  <label for="">Name</label>
+                  <input type="text" class="form-control" placeholder="Vivek">
+                </div>
+              </div>
+              <div class="col-md-6">
+                <div class="form-group">
+                  <label for="">Email</label>
+                  <input type="email" class="form-control" placeholder="vivek@gmail.com">
+                </div>
+              </div>
+              <div class="col-md-6">
+                <div class="form-group">
+                  <label for="">Address</label>
+                  <input type="text" class="form-control" placeholder="XYZ">
+                </div>
+              </div>
+              <div class="col-md-6">
+                <div class="form-group">
+                  <label for="">Phone</label>
+                  <input type="text" class="form-control" placeholder="9874563215">
+                </div>
+              </div>
+              <div class="col-md-6">
+                <div class="form-group">
+                  <label for="">Date</label>
+                  <input type="text" class="form-control" id="book_date" placeholder="Date">
+                </div>
+              </div>
+              <div class="col-md-6">
+                <div class="form-group">
+                  <label for="">Time</label>
+                  <input type="text" class="form-control" id="book_time" placeholder="Time">
+                </div>
+              </div>
+              <div class="col-md-6">
+                <div class="form-group">
+                  <label for="">Cake Flavour</label>
+                  <div class="select-wrap one-third">
+                    <div class="icon"><span class="ios-ios-arrow-down"></span></div>
+                    <select name="" id="" class="form-control">
+                      <option value="">Black Forest</option>
+                      <option value="">Yellow Butter Cake</option>
+                      <option value="">Pound Cake</option>
+                      <option value="">Red Velvet Cake</option>
+                      <option value="">Carrot Cake</option>
+                      <option value="">Sponge Cake</option>
+                      <option value="">Genoise Cake</option>
+                      <option value="">Chiffon Cake</option>
+                    </select>
+                  </div>
+
+                </div>
+              </div>
+              <div class="col-md-6">
+                <div class="form-group">
+                  <label for="">Kg</label>
+                  <div class="select-wrap one-third">
+                    <div class="icon"><span class="ios-ios-arrow-down"></span></div>
+                    <select name="" id="" class="form-control">
+                      <option value="">0.5</option>
+                      <option value="">1</option>
+                      <option value="">1.5</option>
+                      <option value="">2.5</option>
+                      <option value="">5</option>
+                      <option value="">10</option>
+                      <option value="">Custom</option>
+                    </select>
+                  </div>
+                </div>
+              </div>
+              <div class="col-md-12 mt-3">
+                <div class="form-group text-center">
+                  <input type="submit" value="Order Your Cake" class="btn btn-primary py-3 px-5">
+                </div>
+              </div>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- //order section ends  -->
+
+
+
+  <!-- footer section starts -->
+  <footer>
+    <div class="container">
+      <div class="row">
+        <div class="col-md-6 col-lg-4 mt-5">
+          <div class="footer-widget mb-4">
+            <h2 class="footer_heading text-white">Sjcem</h2>
+            <p>We serve and take all type of cake orders. You can personalised cake of your own choice. We
+              have the best chef in the city working for us and happying serving to you.
+              <br><br><br>
+              Sjcemcake@gmail.com
+              <br>
+              8888888888
+            </p>
+            <ul class="mt-3 d-flex">
+              <li class="social_handle"><a href="#"><span class="fa fa-facebook"></span></a></li>
+              <li class="social_handle ps-3"><a href="#"><span class="fa fa-twitter"></span></a></li>
+              <li class="social_handle ps-3"><a href="#"><span class="fa fa-instagram"></span></a></li>
+            </ul>
+          </div>
+        </div>
+        <div class="col-md-6 col-lg-3 mt-5 offset-1">
+          <div class="ftco-footer-widget mb-4">
+            <h2 class="text-white footer_heading">Open Hours</h2>
+            <ul class="list-unstyled open-hours">
+              <li class="text-start  d-flex time_open">
+                <h4 class="time_hour1">Mon</h4>
+                <h4 class="time_hour"> 9:00 - 24:00</h4>
+              </li>
+              <li class="text-start  d-flex time_open">
+                <h4 class="time_hour1">Tue</h4>
+                <h4 class="time_hour"> 9:00 - 24:00</h4>
+              </li>
+              <li class="text-start  d-flex time_open">
+                <h4 class="time_hour1">Wed</h4>
+                <h4 class="time_hour"> 9:00 - 24:00</h4>
+              </li>
+              <li class="text-start  d-flex time_open">
+                <h4 class="time_hour1">Thu</h4>
+                <h4 class="time_hour"> 9:00 - 24:00</h4>
+              </li>
+              <li class="text-start  d-flex time_open">
+                <h4 class="time_hour1">Fri</h4>
+                <h4 class="time_hour"> 9:00 - 02:00</h4>
+              </li>
+              <li class="text-start  d-flex time_open">
+                <h4 class="time_hour1">Sat</h4>
+                <h4 class="time_hour"> 9:00 - 02:00</h4>
+              </li>
+              <li class="text-start  d-flex time_open">
+                <h4 class="time_hour1">Sun</h4>
+                <h4 class="time_hour"> 9:00 - 02:00</h4>
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="col-md-6 col-lg-4 mt-5">
+          <div class="footer-widget mb-4">
+            <h2 class="footer_heading text-white">Newsletter</h2>
+            <p>To get cake catalogue every month by subscribing below.</p>
+            <form action="#" class="subscribe-form">
+              <div class="form-group">
+                <input type="text" class="form-control place mb-2 text-center" placeholder="amitkumard@sjcem.edu.in">
+                <input type="submit" value="Subscribe" class="form-control submit px-3">
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
   </footer>
 
 
-<!-- footer section ends -->
+  <!-- footer section ends -->
 
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-/bQdsTh/da6pkI1MST/rWKFNjaCP5gBSY4sEBT38Q/9RBh9AH40zEOg7Hlq2THRZ" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-/bQdsTh/da6pkI1MST/rWKFNjaCP5gBSY4sEBT38Q/9RBh9AH40zEOg7Hlq2THRZ"
+    crossorigin="anonymous"></script>
 
-  
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-/bQdsTh/da6pkI1MST/rWKFNjaCP5gBSY4sEBT38Q/9RBh9AH40zEOg7Hlq2THRZ"
+    crossorigin="anonymous"></script>
+
+
   <!-- Nav Bar ends -->
 </body>
+
 </html>
