@@ -189,15 +189,27 @@ span {
   .gallery__pic img {
     max-width: 100%;
   }
+
+  .img1{
+      background-size: cover;
+  }
+
+  .menu-img {
+    width: 90px;
+    height: 90px;
+    margin: 0 auto;
+    margin-bottom: 10px;
+    border-radius: 50%;
+  }
   
   .bg-light {
     background: #fafafa !important;
   }
   
-  .ftco-section {
+  /* .ftco-section {
     padding: 2em 0 7em 0;
     position: relative;
-  }
+  } */
   
   .heading-section {
     position: relative;
@@ -444,6 +456,11 @@ span {
   .img{
     background-attachment: fixed;
   background-position: center; 
+  }
+
+  .order_button {
+      background-color: #c8a97e;
+      border: none;
   }
   
 
