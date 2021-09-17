@@ -1,5 +1,8 @@
+require('dotenv').config();
+
 const express = require('express')
 const path = require('path');
+const { resourceUsage } = require('process');
 const app = express()
 
 //Ejs initialization
@@ -13,6 +16,8 @@ app.get("/" , (req, res) => {
     res.render("index")
 })
 
-app.listen(4000, () => {
-    console.log("server started at 4000")
+const port = process.env.PORT
+
+app.listen(port, () => {
+    console.log(`server started at ${port}`)
 })
