@@ -9,8 +9,9 @@ html {
   overflow-x: hidden;
   scroll-behavior: smooth;
 }
-/* body{
-    
+
+/* .row{
+  flex-shrink: none ;
 } */
 
 .order-link {
@@ -36,6 +37,12 @@ html {
 
 .nav-item {
   padding-right: 20px;
+}
+
+@media screen and (max-width: 650px) {
+  .fa  {
+    font-size: 40px;
+  }
 }
 
 /* //caraousel */
@@ -114,7 +121,7 @@ span {
 
 .intro_content {
   position: absolute;
-  top: 1050px;
+  top: 958px;
   transform: translateY(-50%);
   right: 20px;
   width: 679px;
@@ -578,6 +585,13 @@ span {
     margin: 100px 0px;
     width: 50%;
     background: #ffffff;
+    opacity: 0.9;
+  }
+
+  @media screen and (max-width: 650px) {
+    .makereservation{
+      width: 100%;
+    }
   }
   
   .makereservation .form-group label {
