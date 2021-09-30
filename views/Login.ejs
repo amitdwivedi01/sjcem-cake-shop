@@ -60,27 +60,28 @@
                   </div>
                     <div class="col-lg-7 px-5 pt-5">
                       <h1 class="font-weight-bold py-3">ADMIN LOGIN</h1>
+                      <%- include ('partials/messages') %>
                       <h4>Sign into your account </h4>
-                    <form>
+                    <form action="/admin/login" method="POST">
                     <div class="form-row">
                          <div class="col-lg-7">
-                          <input type="email" placeholder="Email-Address" class="form-control my-3 p-3">
+                          <input type="email" name="email" id="email" placeholder="email" class="form-control my-3 p-3">
                     </div>
                   </div>
                   <div class="form-row">
                     <div class="col-lg-7">
-                     <input type="password" placeholder="******" class="form-control">
+                     <input type="password" name="password" id="password" placeholder="******" class="form-control">
                </div>
              </div>
              <div class="form-row">
               <div class="col-lg-7">
 
-               <button type="button" class="btn1 mt-3 mb-5">LOGIN</button>
+               <button type="submit"  class="btn1 mt-3 mb-5">LOGIN</button>
          </div>
 
 
        <a href="#">Forget Password</a>
-       <p>don't have a account? <a href="#">Register here</a></p>
+       <p>don't have a account? <a href="/admin/register">Register here</a></p>
                  </form>
 
                </div>
