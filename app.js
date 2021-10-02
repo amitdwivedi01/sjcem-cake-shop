@@ -7,7 +7,7 @@ const session = require('express-session');
 const { urlencoded } = require('express');
 const passport = require('passport');
 const { ensureAuthenticated } = require ('./config/auth');
-
+const adminRoutes = require('./routes/admin');
 const order = require('./models/order');
 
 
@@ -62,7 +62,7 @@ app.use((req, res, next) => {
 
 
 //routes
-app.use('/admin', require('./routes/admin'));
+app.use('/admin', adminRoutes);
 
 app.get("/" , (req, res) => {
     res.render("index");
