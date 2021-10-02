@@ -95,6 +95,6 @@ app.post('/order', (req, res) => {
 
 
 
-app.listen(8080, () => {
+app.listen(process.env.PORT || 4000, () => {
     console.log(`server started at 8080`)
 })
