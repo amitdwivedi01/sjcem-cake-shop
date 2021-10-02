@@ -31,7 +31,7 @@ app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'ejs');
 
 //Serving Static files
-app.use(express.static(__dirname + '/public'));
+app.use(express.static(path.join(__dirname, '/public'));
 
 //body parser
 app.use(express.urlencoded({extended: false}));
