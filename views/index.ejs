@@ -676,7 +676,7 @@
       class="img"
       id="order"
       style="background-image: url(images/order_bg.jpg)"
-    >
+    > 
       <div class="container" data-aos="zoom-in-up">
         <div class="row d-flex">
           <div class="col-md-7 makereservation p-4 px-md-5 pb-md-5">
@@ -684,15 +684,18 @@
               <span class="subheading">Order</span>
               <h2 class="mb-4">Your Cake</h2>
             </div>
-            <form action="#">
+            <form action="/order" method="POST">
               <div class="row">
                 <div class="col-md-6">
                   <div class="form-group">
                     <label for="">Name</label>
                     <input
-                      type="text"
+                      type="name"
+                      name="name"
+                      id="name"
                       class="form-control"
                       placeholder="Vivek"
+                      required
                     />
                   </div>
                 </div>
@@ -701,6 +704,7 @@
                     <label for="">Email</label>
                     <input
                       type="email"
+                      name="email"
                       class="form-control"
                       placeholder="vivek@gmail.com"
                     />
@@ -709,7 +713,7 @@
                 <div class="col-md-6">
                   <div class="form-group">
                     <label for="">Address</label>
-                    <input type="text" class="form-control" placeholder="XYZ" />
+                    <input type="text" class="form-control" name="address" id="address" placeholder="XYZ" required />
                   </div>
                 </div>
                 <div class="col-md-6">
@@ -718,7 +722,10 @@
                     <input
                       type="text"
                       class="form-control"
+                      name="phone"
+                      id="phone"
                       placeholder="9874563215"
+                      required
                     />
                   </div>
                 </div>
@@ -726,10 +733,11 @@
                   <div class="form-group">
                     <label for="">Date</label>
                     <input
-                      type="text"
+                      type="date"
                       class="form-control"
-                      id="book_date"
-                      placeholder="Date"
+                      name="order_date"
+                      id="order_date"
+                      placeholder="Date" required
                     />
                   </div>
                 </div>
@@ -737,10 +745,11 @@
                   <div class="form-group">
                     <label for="">Time</label>
                     <input
-                      type="text"
+                      type="time"
+                      name="order_time"
                       class="form-control"
-                      id="book_time"
-                      placeholder="Time"
+                      id="order_time"
+                      placeholder="Time" required
                     />
                   </div>
                 </div>
@@ -751,7 +760,8 @@
                       <div class="icon">
                         <span class="ios-ios-arrow-down"></span>
                       </div>
-                      <select name="" id="" class="form-control">
+                      <select name="cake_flavour" id="cake_flavour" class="form-control" required>
+                        <option value=""></option>
                         <option value="">Black Forest</option>
                         <option value="">Yellow Butter Cake</option>
                         <option value="">Pound Cake</option>
@@ -770,7 +780,8 @@
                   <label for="">Kg</label>
                   <div class="select-wrap one-third">
                     <div class="icon"><span class="ios-ios-arrow-down"></span></div>
-                   <!-- <select name="" id="" class="form-control">
+                   <select name="kg" id="kg" class="form-control" required>
+                    <option value=""></option>
                       <option value="">0.5</option>
                       <option value="">1</option>
                       <option value="">1.5</option>
@@ -778,20 +789,8 @@
                       <option value="">5</option>
                       <option value="">10</option>
                       <option value="">Custom</option>
-                    </select> -->
-                    <input type="text" list="Size" placeholder="  Size  " />
-                                            <datalist id="Size">
-                                            <option>0.5</option>
-                                            <option>1</option>
-                                            <option>1.5</option>
-                                            <option>2</option>
-                                            <option>2.5</option>
-                                            <option>3</option>
-                                            <option>3.5</option>
-                                            <option>4</option>
-                                            <option>5</option>
-                                            <option>7</option>
-                                            </datalist>
+                    </select>
+                    
                   </div>
                 </div>
                 <div class="col-md-12 mt-3">
@@ -799,7 +798,9 @@
                     <input
                       type="submit"
                       value="Order Your Cake"
-                      class="btn btn-primary order_button py-3 px-5"
+                      data-bs-toggle="modal"
+                      data-bs-target="#exampleModal"
+                      class="btn btn-secondary order_button py-3 px-5"
                     />
                   </div>
                 </div>
@@ -811,6 +812,26 @@
     </section>
 
     <!-- //order section ends  -->
+
+    <!-- Modal -->
+<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <p>your order is placed</p>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" id="book" data-bs-dismiss="modal">Close</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- model ends  -->
 
     <!-- footer section starts -->
     <footer>
@@ -920,5 +941,11 @@
    <script>
     AOS.init();
   </script>
+
+<script type="text/javascript">
+  document.getElementById("book").onclick = function () {
+      location.href = "/";
+  };
+</script>
   </body>
 </html>

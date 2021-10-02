@@ -8,6 +8,8 @@ const { urlencoded } = require('express');
 const passport = require('passport');
 const { ensureAuthenticated } = require ('./config/auth');
 
+const order = require('./models/order');
+
 
 //passport config
 require('./config/passport')(passport);
@@ -67,10 +69,27 @@ app.get("/" , (req, res) => {
 })
 
 //dashboard page
-app.get('/dashboard', ensureAuthenticated, (req,res) => {
-    res.render('dashboard'), {
-        name: req.admin.fname
-    };
+app.get('/dashboard', ensureAuthenticated, (req,res) =>  
+    res.render('dashboard', {
+        fname: req.admin
+    })
+);
+
+app.post('/order', (req, res) => {
+    const {name, address, phone, order_date, order_time, kg, cake_flavour} = req.body
+    const neworder = new order({
+        name,
+        address,
+        phone,
+        order_date,
+        order_time,
+        kg,
+        cake_flavour
+    }) 
+    //save order
+    neworder.save();
+  
+    console.log(neworder);
 })
 
 

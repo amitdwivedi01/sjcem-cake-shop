@@ -7,11 +7,11 @@ const bcrypt = require('bcryptjs');
 //admin model
 const admin = require('../models/admin');
 
-module.exports = function() {
-    passport.use('local',
-        new LocalStrategy({ username: email}, (email, password, done) => {
+module.exports = function(passport) {
+    passport.use(
+        new LocalStrategy({ usernameField: 'email'}, (email, password, done) => {
             //Match user
-            admin.findOne({email: email}
+            admin.findOne({email: email})
                 .then(admin => {
                     if(!admin){
                         return done(null, false, {message: 'that email is not registered'});
@@ -29,7 +29,7 @@ module.exports = function() {
                     });
 
                 })
-                .catch(err => console.log(err)))
+                .catch(err => console.log(err))
         })
     )
     passport.serializeUser((admin, done) => {
@@ -37,7 +37,7 @@ module.exports = function() {
       });
       
       passport.deserializeUser((id, done) => {
-        User.findById(id, (err, admin) => {
+        admin.findById(id, (err, admin) => {
           done(err, admin);
         });
       });
