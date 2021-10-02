@@ -7,7 +7,7 @@ const passport = require('passport');
 
 //login page
 router.get("/login", (req, res) => {
-    res.render("login");
+    res.render("Login");
 })
 
 
@@ -78,7 +78,7 @@ router.post('/register', (req, res) => {
                    newadmin.save()
                    .then(admin => {
                        req.flash('success_msg', "you are now registered & can login")
-                       res.redirect('/admin/login');
+                       res.redirect('/admin/Login');
                    })
                    .catch(err => console.log(err));
                }))
@@ -94,7 +94,7 @@ router.post('/register', (req, res) => {
 router.post('/login', (req, res, next) => {
     passport.authenticate('local', {
         successRedirect: '/dashboard',
-        failureRedirect: 'admin/login',
+        failureRedirect: 'admin/Login',
         failureFlash: true
     })(req, res, next);
 });
@@ -103,7 +103,7 @@ router.post('/login', (req, res, next) => {
 router.get('/logout', (req, res) => {
     req.logOut();
     req.flash('success_msg', ('you are logout'));
-    res.redirect('/admin/login')
+    res.redirect('/admin/Login')
 })
 
 
