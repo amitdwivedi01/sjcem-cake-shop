@@ -10,9 +10,7 @@ html {
   scroll-behavior: smooth;
 }
 
-/* .row{
-  flex-shrink: none ;
-} */
+
 
 .order-link {
   background-color: #c8a97e;
@@ -42,6 +40,9 @@ html {
 @media screen and (max-width: 650px) {
   .fa  {
     font-size: 40px;
+  }
+  .fa:hover {
+    border: none;
   }
 }
 

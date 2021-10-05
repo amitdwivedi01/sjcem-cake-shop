@@ -68,15 +68,11 @@ app.get("/" , (req, res) => {
     res.render("index");
 })
 
-//dashboard page
-app.get('/dashboard', ensureAuthenticated, (req,res) =>  
-    res.render('dashboard', {
-        fname: req.admin
-    })
-);
+
 
 app.post('/order', (req, res) => {
     const {name, address, phone, order_date, order_time, kg, cake_flavour} = req.body
+   
     const neworder = new order({
         name,
         address,
@@ -87,14 +83,24 @@ app.post('/order', (req, res) => {
         cake_flavour
     }) 
     //save order
-    neworder.save();
-  
+    neworder.save();  
     console.log(neworder);
 })
+
+//dashboard page
+app.get('/dashboard', ensureAuthenticated, (req,res) => {  
+order.find({}, function (err, allDetails) {
+    if (err) {
+        console.log(err);
+    } else {
+        res.render("dashboard", { details: allDetails })
+    }
+});
+});
 
 
 
 
 app.listen(process.env.PORT || 4000, () => {
-    console.log(`server started at 8080`)
+    console.log(`server started at 8080`);
 })
