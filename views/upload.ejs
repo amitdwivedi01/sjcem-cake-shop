@@ -1,0 +1,244 @@
+<!-- <!DOCTYPE html>
+<!-- Created By CodingNepal -->
+<html lang="en" dir="ltr">
+   <head>
+      <meta charset="utf-8">
+      <title>Dashboard</title>
+
+     <!-- Bootstrap CSS CDN -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css" integrity="sha384-9gVQ4dYFwwWSjIDZnLEWnxCjeSWFphJiwGPXr1jddIhOegiu1FwO5qRGvFXOdJZ4" crossorigin="anonymous">
+    <!-- <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-eOJMYsd53ii+scO/bJGFsiCZc+5NDVN2yr8+0RDqr0Ql0h+rP48ckxlpbzKgwra6" crossorigin="anonymous"> -->
+    
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css" integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
+
+    <!-- font awesome -->
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet">C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+      <!-- Our Custom CSS -->
+      <!-- <link rel="stylesheet" type="text/css" href="css/style4.css">  -->
+
+       <!-- Font Awesome JS -->
+    <script defer src="https://use.fontawesome.com/releases/v5.0.13/js/solid.js" integrity="sha384-tzzSw1/Vo+0N5UhStP3bvwWPq+uvzCMfrN1fEFe+xBmv1C/AtVX5K0uZtmcHitFZ" crossorigin="anonymous"></script>
+    <script defer src="https://use.fontawesome.com/releases/v5.0.13/js/fontawesome.js" integrity="sha384-6OIrr52G08NpOFSZdxxz1xdNSndlD4vdcf/q2myIUVO0VsqaGHJsB0RaBE01VTOY" crossorigin="anonymous"></script>
+  
+      <!-- Font Awesome JS -->
+       <!-- <script defer src="https://use.fontawesome.com/releases/v5.0.13/js/solid.js" integrity="sha384-tzzSw1/Vo+0N5UhStP3bvwWPq+uvzCMfrN1fEFe+xBmv1C/AtVX5K0uZtmcHitFZ" crossorigin="anonymous"></script>
+      <script defer src="https://use.fontawesome.com/releases/v5.0.13/js/fontawesome.js" integrity="sha384-6OIrr52G08NpOFSZdxxz1xdNSndlD4vdcf/q2myIUVO0VsqaGHJsB0RaBE01VTOY" crossorigin="anonymous"></script>  -->
+      <link rel="stylesheet" type="text/css" href="css/upload.css">
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"/>
+   </head>
+   <style>
+      #sidebar{
+         height: 100vh;
+      }
+   </style>
+   <body>
+       <!-- <div class="wrapper">  -->
+         <!-- Sidebar  -->
+          <!-- <nav id="sidebar">
+             <div class="sidebar-header">
+                 <h3>ADMIN PANEL</h3>                
+             
+             </div>
+ 
+             <ul class="list-unstyled components">
+                 <li >
+                     <a href="dashboard"  aria-expanded="false" aria-current="true" >
+                         <i class="fas fa-briefcase"></i>
+                         ORDER
+                     </a>
+ 
+                 </li>
+                 
+                 <li class="active">
+                     <a href="#pageSubmenu"  aria-expanded="false" class="dropdown-toggle">
+                         <i class="fas fa-copy"></i>
+                         BLOGS
+                     </a>
+                     <ul class="collapse list-unstyled" id="pageSubmenu">
+                         <li>
+                             <a href="">PHOTOS</a>
+                         </li>
+                         <li>
+                             <a href="#">VIDEOS</a>
+                         </li>
+                        
+                     </ul>
+                 </li>                
+                 <li>
+                     <a href="/admin/logout">
+                         <i class="fas font-family"></i>
+                         LOGOUT
+                     </a>
+                 </li>
+             </ul>
+ 
+ 
+         </nav> 
+
+
+         <div class="containers">
+            <div class="wrappers">
+               <form action="/image-upload" method="POST">
+               <div class="image">
+                  <img src="" alt="">
+               </div>
+               <div class="content">
+                  <div class="icon">
+                     <i class="fas fa-cloud-upload-alt"></i>
+                  </div>
+                  <div class="text">
+                     No file chosen, yet!
+                  </div>
+               </div>
+               <div id="cancel-btn">
+                  <i class="fas fa-times"></i>
+               </div>
+               <div class="file-name">
+                  File name here
+               </div>
+            </div>
+             <div class="button-img-upload"> 
+               
+
+               <button onclick="defaultBtnActive()" id="custom-btn">Choose file</button>
+               <input id="default-btn" type="file" name="image" value="image" hidden>
+               
+               
+               <button class="upload" type="submit">Upload</button>
+            </form>
+             </div> 
+         </div>
+
+
+         
+         
+            
+      
+         
+         <script>
+            const wrapper = document.querySelector(".wrappers");
+            const fileName = document.querySelector(".file-name");
+            const defaultBtn = document.querySelector("#default-btn");
+            const customBtn = document.querySelector("#custom-btn");
+            const cancelBtn = document.querySelector("#cancel-btn ");
+            const img = document.querySelector("img");
+            let regExp = /[0-9a-zA-Z\^\&\'\@\{\}\[\]\,\$\=\!\-\#\(\)\.\%\+\~\_ ]+$/;
+            function defaultBtnActive(){
+              defaultBtn.click();
+            }
+            defaultBtn.addEventListener("change", function(){
+              const file = this.files[0];
+              if(file){
+                const reader = new FileReader();
+                reader.onload = function(){
+                  const result = reader.result;
+                  img.src = result;
+                  wrapper.classList.add("active");
+                }
+                cancelBtn.addEventListener("click", function(){
+                  img.src = "";
+                  wrapper.classList.remove("active");
+                })
+                reader.readAsDataURL(file);
+              }
+              if(this.value){
+                let valueStore = this.value.match(regExp);
+                fileName.textContent = valueStore;
+              }
+            });
+         </script> -->
+         <h2> Uplaod Image </h2>
+            
+            <div class="container center">
+                <!-- <div class="row">
+                    <div class="col-md-12">
+                        <h1 class="white">Virtual Wonders</h1>
+                        <p class="white">Please Upload Images of jpg, jpeg, bmp, png file formats only</p>
+                    </div>
+                </div> -->
+                
+                <form name="upload" method="post" action="/image/image-upload" enctype="multipart/form-data" accept-charset="utf-8" onsubmit="return alert('Success! Your Image is Submited');">
+                    
+                    <div class="row">
+
+                        <div class="col-md-12 center">
+
+                            <div class="mx-2 mt-4 center">
+                                <label for="InputName" class="form-label" style="color: white;">Image Name</label>
+                                <input type="text" class="form-control" id="imageName" aria-describedby="imageName" name="name">
+                                <!-- <div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div> -->
+                            </div>
+
+                            <div class="btn-container mt-4 mx-2">
+                                <!--the three icons: default, ok file (img), error file (not an img)-->
+                                <h1 class="imgupload"><i class="fa fa-file-image-o"></i></h1>
+                                <h1 class="imgupload ok"><i class="fa fa-check"></i></h1>
+                                <h1 class="imgupload stop"><i class="fa fa-times"></i></h1>
+                                <!--this field changes dinamically displaying the filename we are trying to upload-->
+                                <p id="namefile">Only pics allowed! (jpg,jpeg,bmp,png)</p>
+                                <!--our custom btn which which stays under the actual one-->
+                                <button type="button" id="btnup" class="btn btn-primary btn-lg">Browse for your pic!</button>
+                                <!--this is the actual file input, is set with opacity=0 beacause we wanna see our custom one-->
+                                <input type="file" name="image" id="fileup">
+                            </div>
+                        </div>
+                    </div>
+                        <!--additional fields-->
+                    <div class="row">			
+                        <div class="col-md-12">
+                            <!--the defauld disabled btn and the actual one shown only if the three fields are valid-->
+                            <input type="submit" value="Submit!" class="btn btn-primary" id="submitbtn">
+                            <button type="button" class="btn btn-default" disabled="disabled" id="fakebtn">Submit! <i class="fa fa-minus-circle"></i></button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+
+
+            <!-- !-- jQuery CDN - Slim version (=without AJAX)  -->
+          <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+          <!-- Popper.JS -->
+          <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js" integrity="sha384-cs/chFZiN24E4KMATLdqdvsezGxaGsi4hLGOzlXwp5UZB1LY//20VyM2taTB4QvJ" crossorigin="anonymous"></script>
+          <!-- Bootstrap JS -->
+          <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js" integrity="sha384-uefMccjFJAIv6A+rW+L4AHf99KvxDjWSu1z9VI8SKNVmz4sk7buKt/6v9KI65qnm" crossorigin="anonymous"></script>v4xVNRyMGpqkS2by6br4gNJ7DXjqk09RmUpJ8jgGtD7zP9yug3goQfGII0yAns" crossorigin="anonymous"></script>
+
+            <script>
+               $('#fileup').change(function(){
+               
+                   //here we take the file extension and set an array of valid extensions
+                   var res=$('#fileup').val();
+                   var arr = res.split("\\");
+                   var filename=arr.slice(-1)[0];
+                   filextension=filename.split(".");
+                   filext="."+filextension.slice(-1)[0];
+                   valid=[".jpg",".png",".jpeg",".bmp", ".mp4"];
+               
+                   //if file is not valid we show the error icon, the red alert, and hide the submit button
+                   if (valid.indexOf(filext.toLowerCase())==-1){
+                       $( ".imgupload" ).hide("slow");
+                       $( ".imgupload.ok" ).hide("slow");
+                       $( ".imgupload.stop" ).show("slow");
+                   
+                       $('#namefile').css({"color":"red","font-weight":700});
+                       $('#namefile').html("File "+filename+" is not  pic!");
+                       
+                       $( "#submitbtn" ).hide();
+                       $( "#fakebtn" ).show();
+                   }else{
+                       //if file is valid we show the green alert and show the valid submit
+                       $( ".imgupload" ).hide("slow");
+                       $( ".imgupload.stop" ).hide("slow");
+                       $( ".imgupload.ok" ).show("slow");
+                   
+                       $('#namefile').css({"color":"green","font-weight":700});
+                       $('#namefile').html(filename);
+                   
+                       $( "#submitbtn" ).show();
+                       $( "#fakebtn" ).hide();
+                   }
+               });
+           </script>
+           
+   </body>
+</html> 

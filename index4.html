@@ -6,12 +6,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
 
-    <title>Dashboard</title>
+    <title>Collapsible sidebar using Bootstrap 4</title>
 
     <!-- Bootstrap CSS CDN -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css" integrity="sha384-9gVQ4dYFwwWSjIDZnLEWnxCjeSWFphJiwGPXr1jddIhOegiu1FwO5qRGvFXOdJZ4" crossorigin="anonymous">
     <!-- Our Custom CSS -->
-    <link rel="stylesheet" type="text/css" href="css/style4.css">
+    <link rel="stylesheet" href="style4.css">
 
     <!-- Font Awesome JS -->
     <script defer src="https://use.fontawesome.com/releases/v5.0.13/js/solid.js" integrity="sha384-tzzSw1/Vo+0N5UhStP3bvwWPq+uvzCMfrN1fEFe+xBmv1C/AtVX5K0uZtmcHitFZ" crossorigin="anonymous"></script>
@@ -19,44 +19,19 @@
 
 </head>
 
-<style>
-    th, td {
-  border-bottom: 1px solid #7386D5;
-  padding: 7px 7px;
-  
-}
-
-th, td {
-  background-color: #fff;
-}
-
-#content tr:nth-child(even){background-color: #f2f2f2;}
-
-#content tr:hover {background-color: #ddd;}
-
-#content th {
-  padding-top: 12px;
-  padding-bottom: 12px;
-  text-align: left;
-  background-color: #04AA6D;
-  color: white;
-}
-
-</style>
-
 <body>
 
     <div class="wrapper">
         <!-- Sidebar  -->
         <nav id="sidebar">
             <div class="sidebar-header">
-                <h3>ADMIN PANEL</h3>                
-            
+                <h3>ADMIN</h3>
+                <strong>BS</strong>
             </div>
 
             <ul class="list-unstyled components">
                 <li class="active">
-                    <a href="#content"  aria-expanded="false" aria-current="true" >
+                    <a href="#homeSubmenu" data-toggle="collapse" aria-expanded="false" >
                         <i class="fas fa-briefcase"></i>
                         ORDER
                     </a>
@@ -64,20 +39,22 @@ th, td {
                 </li>
                 
                 <li>
-                    <a href="./blog"  aria-expanded="false" class="dropdown-toggle">
+                    <a href="#pageSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">
                         <i class="fas fa-copy"></i>
                         BLOGS
                     </a>
                     <ul class="collapse list-unstyled" id="pageSubmenu">
                         <li>
-                            <a href="./upload.ejs">PHOTOS</a>
+                            <a href="#">PHOTOS</a>
                         </li>
                         <li>
                             <a href="#">VIDEOS</a>
                         </li>
                        
                     </ul>
-                </li>                
+                </li>
+                
+                <br><br><br><br><br><br><br><br><br>
                 <li>
                     <a href="/admin/logout">
                         <i class="fas font-family"></i>
@@ -85,48 +62,6 @@ th, td {
                     </a>
                 </li>
             </ul>
-
-
-        </nav>
-    
-
-    <div id="content">
-        <h1>ORDER DETAILS</h1>        
-              <% if(details!=null) { %>
-            <table id="table_id" class="display" cellpadding="0" width="100%">
-                <thead class="align-items-center" style="font-size: 20px">
-                <tr>
-                    <th>ID</th>
-                    <th>Name</th>
-                    <th>phone</th>
-                    <th>order_date</th>
-                    <th>order_time </th>
-                    <th>cake_flavour</th>
-                    <th>kg</th>
-                    <th>address</th>                    
-                </tr>
-                </thead>
-            <% details.forEach(function(order, index=1){ %>
-                <tbody style="font-size: 15px ;">
-                <tr>
-                    <td><%= index+1%></td>
-                    <td><%= order.name%></td>
-                    <td><%= order.phone %></td>
-                    <td><%= order.order_date %></td>
-                    <td><%= order.order_time %></td>
-                    <td><%= order.cake_flavour %></td>
-                    <td><%= order.kg %></td>
-                    <td><%= order.address %></td>
-                    
-                </tr>
-                </tbody>
-            <% }) %>
-            </table>
-        <% } %>
-    
-    </div>
-
-    
 
             
        

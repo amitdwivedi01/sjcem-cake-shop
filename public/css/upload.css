@@ -1,0 +1,213 @@
+/* @import url('https://fonts.googleapis.com/css?family=Poppins:400,500,600,700&display=swap');
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+.containers{
+  display: grid;
+  height: 100%;
+  place-items: center;
+  text-align: center;
+}
+.containers{
+  height: 350px;
+  width: 430px;
+  position: relative;
+}
+.containers .wrappers{
+  position: relative;
+  height: 300px;
+  width: 100%;
+  border-radius: 10px;
+  background: #fff;
+  border: 2px dashed #c2cdda;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+.wrappers.active{
+  border: none;
+}
+.wrappers .image{
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.wrappers img{
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+}
+.wrappers .icon{
+  font-size: 100px;
+  color: #9658fe;
+}
+.wrappers .text{
+  font-size: 20px;
+  font-weight: 500;
+  color: #5B5B7B;
+}
+.wrappers #cancel-btn {
+  position: absolute;
+  font-size: 20px;
+  right: 15px;
+  top: 15px;
+  color: #9658fe;
+  cursor: pointer;
+  display: none;
+}
+.wrappers.active:hover #cancel-btn {
+  display: block;
+}
+.wrappers #cancel-btn i:hover{
+  color: #e74c3c;
+}
+.wrappers .file-name{
+  position: absolute;
+  bottom: 0px;
+  width: 100%;
+  padding: 8px 0;
+  font-size: 18px;
+  color: #fff;
+  display: none;
+  background: linear-gradient(135deg,#3a8ffe 0%,#9658fe 100%);
+}
+.wrappers.active:hover .file-name{
+  display: block;
+}
+
+.button-img-upload{
+  display: flex;
+  width: 100%;
+}
+.containers #custom-btn{
+ 
+  margin-top: 30px;
+  display: block;  
+  width: 50%;
+  height: 50px;
+  border: none;
+  outline: none;
+  border-radius: 25px;
+  color: #fff;
+  font-size: 18px;
+  font-weight: 500;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  cursor: pointer;
+  background: linear-gradient(135deg,#3a8ffe 0%,#9658fe 100%);
+}
+
+.upload{  
+  margin-left: 25px;
+  margin-top: 30px;
+  display: block;
+  width: 40%;
+  height: 50px;
+  border: none;
+  outline: none;
+  border-radius: 25px;
+  color: #fff;
+  font-size: 18px;
+  font-weight: 500;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  cursor: pointer;
+  background: linear-gradient(135deg,#3a8ffe 0%,#9658fe 100%);
+} */
+
+/*just bg and body style*/
+.container{
+  background-color:#1E2832;
+  padding-bottom:20px;
+  margin-top:10px;
+  border-radius:5px;
+  }
+  .center{
+  text-align:center;  
+  }
+  #top{
+  margin-top:20px;  
+  }
+  .btn-container{
+  background:#fff;
+  border-radius:5px;
+  padding-bottom:20px;
+  margin-bottom:20px;
+  }
+  .white{
+  color:white;
+  }
+  .imgupload{
+  color:#1E2832;
+  padding-top:40px;
+  font-size:7em;
+  }
+  #namefile{
+  color:black;
+  }
+  h4>strong{
+  color:#ff3f3f
+  }
+  .btn-primary{
+  border-color: #ff3f3f !important;
+  color: #ffffff;
+  text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.25);
+  background-color: #ff3f3f !important;
+  border-color: #ff3f3f !important;
+  }
+  
+  /*these two are set to not display at start*/
+  .imgupload.ok{
+  display:none;
+  color:green;
+  }
+  .imgupload.stop{
+  display:none;
+  color:red;
+  }
+  
+  
+  /*this sets the actual file input to overlay our button*/ 
+  #fileup{
+  opacity: 0;
+  -moz-opacity: 0;
+  filter: progid:DXImageTransform.Microsoft.Alpha(opacity=0);
+  width:200px;
+  cursor: pointer;
+  position:absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  bottom: 40px;
+  height: 50px;
+  }
+  
+  /*switch between input and not active input*/
+  #submitbtn{
+    padding:5px 50px;
+    display:none;
+  }
+  #fakebtn{
+    padding:5px 40px;
+  }
+  
+  
+  
+  #sign{
+      color:#1E2832;
+      position:fixed;
+      right:10px;
+      bottom:10px;
+      text-shadow:0px 0px 0px #1E2832;
+      transition:all.3s;
+  }
+  #sign:hover{
+      color:#1E2832;
+      text-shadow:0px 0px 5px #1E2832;
+  }

@@ -8,7 +8,12 @@ const { urlencoded } = require('express');
 const passport = require('passport');
 const { ensureAuthenticated } = require ('./config/auth');
 const adminRoutes = require('./routes/admin');
+const imageRoutes = require('./routes/image');
+const videoRoutes = require('./routes/video');
 const order = require('./models/order');
+const image = require('./models/image');
+
+
 
 
 //passport config
@@ -63,9 +68,16 @@ app.use((req, res, next) => {
 
 //routes
 app.use('/admin', adminRoutes);
+app.use('/image', imageRoutes);
+app.use('/video', videoRoutes);
 
 app.get("/" , (req, res) => {
-    res.render("index");
+    image.find({}, function (err, allDetails) {
+        if (err) {
+            console.log(err);
+        } else {
+            res.render("index", { details: allDetails })
+        } })
 })
 
 
@@ -98,9 +110,13 @@ order.find({}, function (err, allDetails) {
 });
 });
 
+app.get('/blog', (req,res) => {
+    res.render('upload');
+})
 
 
 
-app.listen(process.env.PORT || 4000, () => {
+
+app.listen(process.env.PORT || 3000, () => {
     console.log(`server started at 8080`);
 })

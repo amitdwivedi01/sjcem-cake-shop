@@ -321,11 +321,20 @@
               <img src="images/dish7.jpg" alt="" />
             </div>
           </div>
+          
           <div class="col-lg-3 col-md-4 col-6 p-0">
             <div class="gallery__pic">
               <img src="images/dish8.jpg" alt="" />
-            </div>
+            </div>          
           </div>
+          
+          <% details.forEach(function(image){ %>
+            <div class="col-lg-3 col-md-4 col-6 p-0">
+              <div class="gallery__pic">
+                <img src="<%= image.image%>" alt="" />
+              </div>          
+            </div>
+            <% }) %>
         </div>
       </div>
     </section>
